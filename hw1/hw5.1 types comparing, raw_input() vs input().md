@@ -1,17 +1,17 @@
 #### 1. Составить таблицу соответствия между различными объектами основных классов: int, str и объектами класса bool.
 | Value | Type |bool("Value") | Value | Type |bool("Value") |
 | ------ | ------ | ------| ------| ------| ------| 
-| Never | str |True| 1 |int| true
-| Gonna | str |True| 10 | int | true
-| Give  | str |True| 100 | int | true
-| You | str |True| 1337 | int | true
-| Up | str |True|65536| int | true
-| Never | str|True|0| int | **false**
-| Gonna | str |True|25632420| int | true
-| Let | str |True|-1| int | true
-| You | str |True|-12312| int | true
-| Down | str |True|-65536| int | true
-| "" (empty str) | str |**False**|-324234242| int | true
+| Never | str |True| 1 |int| true|
+| Gonna | str |True| 10 | int | true|
+| Give  | str |True| 100 | int | true|
+| You | str |True| 1337 | int | true|
+| Up | str |True|65536| int | true|
+| Never | str|True|0| int | **false**|
+| Gonna | str |True|25632420| int | true|
+| Let | str |True|-1| int | true|
+| You | str |True|-12312| int | true|
+| Down | str |True|-65536| int | true|
+| "" (empty str) | str |**False**|-324234242| int | true|
 Все строки, кроме пустых - True.
 Пустые строки - False.
 Все целочисленные значения, кроме 0 - True.
