@@ -12,6 +12,7 @@
 | You | str |True|-12312| int | true|
 | Down | str |True|-65536| int | true|
 | "" (empty str) | str |**False**|-324234242| int | true|
+
 Все строки, кроме пустых - True.
 Пустые строки - False.
 Все целочисленные значения, кроме 0 - True.
