@@ -1,0 +1,23 @@
+userPrint=input('Insert some text and press Enter :\n').lower().split()
+print(Counter(userPrint).most_common(2))
+
+userPrint=input('Insert some text and press Enter :\n').lower().split()
+myDict=dict(Counter(userPrint))
+rMyDict=dict((v,k) for k, v in myDict.items())
+
+userPrint=input('Insert some text and press Enter :\n').lower().split()
+myDict=dict(Counter(userPrint))
+print('\n'.join("{} - {}".format(v, k) for k, v in Counter(myDict).most_common()))
+
+userPrint=input('Insert some text and press Enter :\n').lower().split()
+from collections import Counter
+from itertools import takewhile
+c = Counter(userPrint)
+print(list(takewhile(lambda val: val[1] == c.most_common(1)[0][1], c.most_common())))
+
+from collections import Counter
+from itertools import takewhile
+userPrint=input('Insert some text and press Enter :\n').lower().split()
+c = Counter(userPrint)
+top=list(takewhile(lambda val: val[1] == c.most_common(1)[0][1], c.most_common()))
+print('\n'.join("{} - {}".format(v, k) for k, v in top))
