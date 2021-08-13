@@ -1,7 +1,17 @@
-#!/usr/bin/env python3
-from collections import Counter
-from itertools import takewhile
-userPrint=input('Insert some text and press Enter :\n').lower().split()
-c = Counter(userPrint)
-top=list(takewhile(lambda val: val[1] == c.most_common(1)[0][1], c.most_common()))
-print('\n'.join("{} - {}".format(v, k) for k, v in top))
+# !/usr/bin/env python3
+def word_count(str):
+    counts = dict()
+    words = str.lower().split()
+
+    for word in words:
+        if word in counts:
+            counts[word] += 1
+        else:
+            counts[word] = 1
+    return counts
+
+user_string = word_count(input())
+max_value = max(user_string.values())
+output=[k for k,v in user_string.items() if v == max_value]
+for i in range(len(output)):
+    print(max_value, '-', output[i])
