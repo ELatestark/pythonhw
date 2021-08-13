@@ -1,4 +1,5 @@
 # !/usr/bin/env python3
+# print most common word and its quantity
 def word_count(str):
     counts = dict()
     words = str.lower().split()
