@@ -2,7 +2,7 @@
 # get location and google maps link from coordinates
 import re
 from geopy.geocoders import Nominatim
-coordsfile = open(r'C:/etc/text.txt', 'r')
+coordsfile = open('text.txt', 'r')
 coordsfile_lines = coordsfile.readlines()
 coords_list = list(re.sub('[^0-9\.]', ' ', str(coordsfile_lines)).strip().split(" "))
 coords = [coords_list[:len(coords_list)//2],coords_list[len(coords_list)//2:]]
