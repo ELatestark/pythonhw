@@ -31,16 +31,18 @@ while 1:
                 conn.send('Host added.'.encode())
             else:
                 conn.send('Incorrect IP'.encode())
-        elif validators.url('http://'+data):
-            resolve_ip = dns.resolver.resolve(data, 'A')
-            for resolver_ip in resolve_ip:
-                conn.send(str(resolver_ip).encode())
         else:
-                out_file = open('hosts', 'r')
-                hosts_lines = out_file.readlines()
-                for line in hosts_lines:
-                    if data == line.split(':')[0]:
-                        conn.send(line.split(':')[1].encode())
+            out_file = open('hosts', 'r')
+            hosts_lines = out_file.readlines()
+            for line in hosts_lines:
+                if data == line.split(':')[0]:
+                    conn.send(line.split(':')[1].encode())
+                    break
+            else:
+                if validators.url('http://'+data):
+                    resolve_ip = dns.resolver.resolve(data, 'A')
+                    for resolver_ip in resolve_ip:
+                        conn.send(str(resolver_ip).encode())
                 else:
                     conn.send('No such record or site unavailable.'.encode())
     except KeyboardInterrupt:
